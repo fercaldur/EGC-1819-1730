@@ -15,4 +15,4 @@ install:
   - pip install -r requirements.txt
 script:
   - cd decide
-  - python manage.py test store
+  - if [[ $TRAVIS_BR == "master" ]]; then python manage.py test store; fi;
